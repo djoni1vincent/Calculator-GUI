@@ -24,5 +24,25 @@ coffee_brown = "#5B532C" # Text, primary symbols, outline
 window = tkinter.Tk() # create the window
 window.title("Calculator")
 window.resizable(False, False)
-window.mainloop()
 
+frame = tkinter.Frame(window)
+label = tkinter.Label(frame, text="0", font=("Arial", 48), background=warm_beige,
+                      foreground=coffee_brown,)
+
+label.grid(row=0, column=0, columnspan=column_count, sticky="we")
+
+for row in range(row_count):
+    for column in range(column_count):
+        value = button_values[row][column]
+        button = tkinter.Button(frame, text=value, font=("Arial, 30"),
+                                width=column_count - 1, height=1,
+                                command=lambda value=value:button_clicked(value))
+        button.grid(row=row+1, column=column)
+
+
+frame.pack()
+
+def button_clicked (value):
+    pass
+
+window.mainloop()
