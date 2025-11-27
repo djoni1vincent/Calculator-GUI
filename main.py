@@ -11,3 +11,18 @@ button_values = [
 right_symbols = ["÷", "×", "-", "+", "="]
 top_symbols = ["AC", "+/-", "%"]
 
+row_count = len(button_values) # 5
+column_count = len(button_values[0]) # 4
+
+warm_beige = "#EBD5AB" # Main body/casing
+avocado_green = "#658C58" # Function keys, accents, display background
+burnt_orange = "#E67E22" # Accent color for "equals" button
+coffee_brown = "#5B532C" # Text, primary symbols, outline
+
+# window setup
+
+window = tkinter.Tk() # create the window
+window.title("Calculator")
+window.resizable(False, False)
+window.mainloop()
+
